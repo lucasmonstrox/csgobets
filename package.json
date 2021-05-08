@@ -1,7 +1,7 @@
 {
   "name": "csgobets",
   "version": "1.0.0",
-  "description": "A way to bet through csgo gambling websites",
+  "description": "A way to bet through CS:GO gambling websites",
   "main": "index.ts",
   "scripts": {
     "build": "tsc",
