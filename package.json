@@ -6,7 +6,8 @@
   "scripts": {
     "build": "tsc",
     "start": "ts-node index.ts",
-    "test": "jest"
+    "test": "jest",
+    "postinstall": "husky install"
   },
   "author": "",
   "license": "ISC",
