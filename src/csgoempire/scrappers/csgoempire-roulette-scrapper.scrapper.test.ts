@@ -1,8 +1,8 @@
 import { mocked } from 'ts-jest/utils';
-import { Color } from '../typings/roulette-scrapper.typings';
-import { getElement } from '../utils/element';
+import { Color } from '../../typings/roulette-scrapper.typings';
+import { getElement } from '../../utils/element';
 import CSGOEmpireRouletteScrapper from './csgoempire-roulette-scrapper.scrapper';
-jest.mock('../utils/element');
+jest.mock('../../utils/element');
 describe('CSGOEmpireRouletteScrapper', () => {
   let scrapper: CSGOEmpireRouletteScrapper;
   beforeEach(() => {

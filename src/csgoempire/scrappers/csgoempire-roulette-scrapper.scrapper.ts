@@ -1,5 +1,5 @@
-import { Color } from '../typings/roulette-scrapper.typings';
-import { getElement, getElements } from '../utils/element';
+import { Color } from '../../typings/roulette-scrapper.typings';
+import { getElement, getElements } from '../../utils/element';
 export default class CSGOEmpireRouletteScrapper {
   betsTotalQuerySelectorMapper: Record<Color, string> = {
     black: '.bets-container:first-child',
