@@ -1,5 +1,9 @@
 import { Color } from '../../typings/roulette-scrapper.typings';
-import { getElement, getElements } from '../../utils/element';
+import {
+  getElement,
+  getElementOrError,
+  getElements,
+} from '../../utils/element';
 export default class RouletteScrapper {
   betsTotalQuerySelectorMapper: Record<Color, string> = {
     black: '.bets-container:first-child',
@@ -15,7 +19,7 @@ export default class RouletteScrapper {
   previousRollsSelector = '.previous-rolls-item > div';
   getBetsTotalByColor(color: Color): number {
     const querySelector = this.betsTotalQuerySelectorMapper[color];
-    const betsTotalElement = getElement(querySelector);
+    const betsTotalElement = getElementOrError(querySelector);
     const match = betsTotalElement.innerText.match(
       /(?<betsTotal>\d+) Bets Total/
     );
@@ -28,7 +32,7 @@ export default class RouletteScrapper {
   }
   getLast100ByColor(color: Color): number {
     const querySelector = this.last100QuerySelectorMapper[color];
-    const element = getElement(querySelector);
+    const element = getElementOrError(querySelector);
     const last100 = +element.innerText;
     return last100;
   }

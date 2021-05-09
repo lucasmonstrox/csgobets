@@ -1,5 +1,7 @@
-export const getElement = (selector: string): HTMLElement => {
-  const element = document.querySelector<HTMLElement>(selector);
+export const getElement = (selector: string): HTMLElement | null =>
+  document.querySelector<HTMLElement>(selector);
+export const getElementOrError = (selector: string): HTMLElement => {
+  const element = getElement(selector);
   if (!element) {
     throw new Error('Cannot get element');
   }
