@@ -41,5 +41,7 @@ jobs:
         run: yarn --frozen-lockfile
       - name: Unit tests
         run: yarn test
+      - name: Install cypress
+        run: ./node_modules/.bin/cypress install
       - name: E2E tests
         run: yarn e2e
