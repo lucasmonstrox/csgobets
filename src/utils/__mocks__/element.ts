@@ -1,1 +1,2 @@
-export const getElement = jest.fn(() => ({ innerText: '10 Bets Total' }));
+export const getElement = jest.fn();
+export const getElementOrError = jest.fn();
