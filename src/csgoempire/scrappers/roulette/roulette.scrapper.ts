@@ -1,12 +1,12 @@
 import {
   Color,
   RouletteScrapper as IRouletteScrapper,
-} from '../../typings/roulette-scrapper.typings';
+} from '../../../typings/roulette-scrapper.typings';
 import {
   getElement,
   getElementOrError,
   getElements,
-} from '../../utils/element';
+} from '../../../utils/element';
 export default class RouletteScrapper implements IRouletteScrapper {
   betsTotalQuerySelectorMapper: Record<Color, string> = {
     black: '.bets-container:first-child',
