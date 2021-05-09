@@ -1,12 +1,12 @@
 import { mocked } from 'ts-jest/utils';
 import { Color } from '../../typings/roulette-scrapper.typings';
 import { getElement } from '../../utils/element';
-import CSGOEmpireRouletteScrapper from './csgoempire-roulette-scrapper.scrapper';
+import RouletteScrapper from './roulette-scrapper.scrapper';
 jest.mock('../../utils/element');
-describe('CSGOEmpireRouletteScrapper', () => {
-  let scrapper: CSGOEmpireRouletteScrapper;
+describe('RouletteScrapper', () => {
+  let scrapper: RouletteScrapper;
   beforeEach(() => {
-    scrapper = new CSGOEmpireRouletteScrapper();
+    scrapper = new RouletteScrapper();
   });
   describe('getBetsTotalByColor', () => {
     it('should throw exception when cannot get bets total', () => {

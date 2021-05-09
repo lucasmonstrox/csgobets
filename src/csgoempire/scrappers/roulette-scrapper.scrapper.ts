@@ -1,6 +1,6 @@
 import { Color } from '../../typings/roulette-scrapper.typings';
 import { getElement, getElements } from '../../utils/element';
-export default class CSGOEmpireRouletteScrapper {
+export default class RouletteScrapper {
   betsTotalQuerySelectorMapper: Record<Color, string> = {
     black: '.bets-container:first-child',
     green: '.bets-container:nth-child(2)',
