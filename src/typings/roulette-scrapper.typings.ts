@@ -12,7 +12,5 @@ export interface RouletteScrapper {
   getBetsTotalByColor(color: Color): number;
   getLast100ByColor(color: Color): number;
   getPreviousRolls(): Color[];
-  getRoundHash(): string;
-  getTimer(): number;
   isRolling(): boolean;
 }
