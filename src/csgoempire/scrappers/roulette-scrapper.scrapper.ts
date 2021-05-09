@@ -6,6 +6,7 @@ export default class RouletteScrapper {
     green: '.bets-container:nth-child(2)',
     red: '.bets-container:last-child',
   };
+  isRollingSelector = '.bets-container--rolling';
   last100QuerySelectorMapper: Record<Color, string> = {
     black: '.text-light-grey-1.text-xxs.font-bold.mr-2:first-child',
     green: '.text-light-grey-1.text-xxs.font-bold.mr-2:nth-child(2)',
@@ -47,5 +48,9 @@ export default class RouletteScrapper {
       previousRolls.push(rollResult);
     }
     return previousRolls;
+  }
+  isRolling(): boolean {
+    const isRolling = !!getElement(this.isRollingSelector);
+    return isRolling;
   }
 }
