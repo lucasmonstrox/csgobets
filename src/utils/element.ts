@@ -5,3 +5,11 @@ export const getElement = (selector: string): HTMLElement => {
   }
   return element;
 };
+export const getElements = (selector: string): HTMLElement[] => {
+  const elements = Array.from(document.querySelectorAll<HTMLElement>(selector));
+  const hasNoElements = elements.length === 0;
+  if (hasNoElements) {
+    throw new Error('Cannot get elements');
+  }
+  return elements;
+};
