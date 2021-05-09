@@ -10,7 +10,7 @@ export interface Last100 {
 }
 export interface RouletteScrapper {
   getBetsTotalByColor(color: Color): number;
-  getLast100(): Last100;
+  getLast100ByColor(color: Color): number;
   getPreviousRolls(): Color[];
   getRoundHash(): string;
   getTimer(): number;
