@@ -1,13 +1,13 @@
 import {
   Color,
-  RouletteScrapper as IRouletteScrapper,
+  RouletteScrapper as IRouletteRepository,
 } from '../../../typings/roulette-scrapper.typings';
 import {
   getElement,
   getElementOrError,
   getElements,
 } from '../../../utils/element';
-export default class RouletteScrapper implements IRouletteScrapper {
+export default class RouletteScrapper implements IRouletteRepository {
   betsTotalQuerySelectorMapper: Record<Color, string> = {
     black: '.bets-container:first-child',
     green: '.bets-container:nth-child(2)',
@@ -45,12 +45,12 @@ export default class RouletteScrapper implements IRouletteScrapper {
     const previousRolls = [];
     for (let i = 0; i < 10; i++) {
       const rollElement = previousRollsElements[i];
-      const isBlack = rollElement.className.indexOf(`coin-ct`) > -1;
+      const isBlack = rollElement.className.indexOf('coin-ct') > -1;
       if (isBlack) {
         previousRolls.push(Color.Black);
         continue;
       }
-      const isRed = rollElement.className.indexOf(`coin-t`) > -1;
+      const isRed = rollElement.className.indexOf('coin-t') > -1;
       const rollResult = isRed ? Color.Red : Color.Green;
       previousRolls.push(rollResult);
     }
