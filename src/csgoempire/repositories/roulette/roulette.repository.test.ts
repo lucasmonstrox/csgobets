@@ -1,5 +1,5 @@
 import { mocked } from 'ts-jest/utils';
-import { Color } from '../../../typings/roulette-scrapper.typings';
+import { Color } from '../../../typings/roulette-repository.typings';
 import { getElement, getElementOrError } from '../../../utils/element';
 import RouletteScrapper from './roulette.repository';
 jest.mock('../../../utils/element');
